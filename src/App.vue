@@ -12,7 +12,7 @@
     />
     <Results v-if="data.resultsOn" :score="data.score" />
     <div class="button">
-      <button class="stats" @click="showStats()">{{ data.statsText }}</button>
+      <button class="stats" @click="showStats">{{ data.statsText }}</button>
     </div>
     <Stats v-if="data.statsOn" :best-score="data.bestScore" :avg-score="data.avgScore" />
   </div>
@@ -33,8 +33,9 @@ const data = reactive({
   statsText: "Show Stats",
   delay: null,
   score: null,
-  bestScore: "!play first",
-  avgScore: "!play first",
+  bestScore: "!You have to play first!",
+  avgScore: "!You have to play first!",
+  highestRank: "!You have to play first!",
 });
 
 // STATS

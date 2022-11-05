@@ -1,13 +1,18 @@
 <template>
   <div class="block">
-    <p id="message">Your highest score is: {{ bestScore }}</p>
-    <p>Your average score is: {{ avgScore }}</p>
+    <p>Your highest score is:</p>
+    <p id="score">{{ bestScore }}</p>
+    <p>Your average score is:</p>
+    <p id="score">{{ avgScore }}</p>
   </div>
 </template>
 
 <script setup>
 // PROPS
 const props = defineProps({
+  highestRank: {
+    type: String,
+  },
   bestScore: {
     type: String,
   },
@@ -34,8 +39,14 @@ const props = defineProps({
 
 p {
   color: rgb(169, 235, 255);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   margin: 10px 0;
+}
+
+#score {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-style: italic;
 }
 </style>

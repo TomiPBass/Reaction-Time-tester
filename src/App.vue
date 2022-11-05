@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-// IMPORT
+// IMPORTS
 import { reactive } from "vue";
 import Block from "./components/Block.vue";
 import Results from "./components/Results.vue";
@@ -54,6 +54,7 @@ const computeStats = () => {
 };
 const showStats = () => {
   data.statsOn = !data.statsOn;
+  data.resultsOn = false;
   if (data.statsOn === true) {
     data.statsText = "Hide Stats";
   } else {

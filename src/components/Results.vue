@@ -7,7 +7,7 @@
 
 <script setup>
 // IMPORTS
-import { ref, onMounted, reactive } from "vue";
+import { onMounted, reactive } from "vue";
 
 // PROPS
 const props = defineProps({

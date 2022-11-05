@@ -7,6 +7,7 @@
 <script setup>
 // IMPORTS
 import { reactive, onMounted } from "vue";
+
 // DATA
 const data = reactive({
   showBlock: false,

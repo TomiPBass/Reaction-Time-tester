@@ -23,7 +23,7 @@ const data = reactive({
 
 // HOOKS
 onMounted(() => {
-  if (props.score < 220) {
+  if (props.score < 200) {
     data.message = "WOW!";
   } else if (props.score < 300) {
     data.message = "That's pretty good!";

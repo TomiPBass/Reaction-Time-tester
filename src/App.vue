@@ -4,6 +4,9 @@
     <div class="button">
       <button @click="startGame()" :disabled="data.gameOn">Play!</button>
     </div>
+    <div class="button">
+      <button class="stats" @click="showStats">{{ data.statsText }}</button>
+    </div>
     <Block
       v-if="data.gameOn"
       :game-on="data.gameOn"
@@ -11,9 +14,6 @@
       @close="closeGame"
     />
     <Results v-if="data.resultsOn" :score="data.score" />
-    <div class="button">
-      <button class="stats" @click="showStats">{{ data.statsText }}</button>
-    </div>
     <Stats v-if="data.statsOn" :best-score="data.bestScore" :avg-score="data.avgScore" />
   </div>
 </template>
@@ -66,6 +66,8 @@ const startGame = () => {
   data.delay = 2000 + Math.random() * 5000;
   data.resultsOn = false;
   data.gameOn = true;
+  data.statsOn = false;
+  data.statsText = "Show Stats";
 };
 const closeGame = (reactionTime) => {
   data.score = reactionTime;
